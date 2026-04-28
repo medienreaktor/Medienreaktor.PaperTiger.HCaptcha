@@ -1,7 +1,7 @@
-prototype(Medienreaktor.Hcaptcha:Hcaptcha) < prototype(Neos.Neos:ContentComponent) {
+prototype(Medienreaktor.PaperTiger.HCaptcha:HCaptcha) < prototype(Neos.Neos:ContentComponent) {
 
-    siteKey = ${Configuration.setting('Medienreaktor.Hcaptcha.siteKey')}
-    secretKey = ${Configuration.setting('Medienreaktor.Hcaptcha.secretKey')}
+    siteKey = ${Configuration.setting('Medienreaktor.PaperTiger.HCaptcha.siteKey')}
+    secretKey = ${Configuration.setting('Medienreaktor.PaperTiger.HCaptcha.secretKey')}
     name = ${node.aggregateId.value}
 
     @private {
@@ -14,7 +14,7 @@ prototype(Medienreaktor.Hcaptcha:Hcaptcha) < prototype(Neos.Neos:ContentComponen
             }
         }
         scriptCallbackUri = Neos.Fusion:ResourceUri {
-            path = 'resource://Medienreaktor.Hcaptcha/Public/JavaScript/Hcaptcha.js'
+            path = 'resource://Medienreaktor.PaperTiger.HCaptcha/Public/JavaScript/HCaptcha.js'
         }
     }
 

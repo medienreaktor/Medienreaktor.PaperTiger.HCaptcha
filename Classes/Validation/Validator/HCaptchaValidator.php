@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Medienreaktor\Hcaptcha\Validation\Validator;
+namespace Medienreaktor\PaperTiger\HCaptcha\Validation\Validator;
 
 use GuzzleHttp\Psr7\ServerRequest;
 use GuzzleHttp\Psr7\Uri;
@@ -9,7 +9,7 @@ use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Http\Client\CurlEngine;
 use Neos\Flow\Validation\Validator\AbstractValidator;
 
-class HcaptchaValidator extends AbstractValidator {
+class HCaptchaValidator extends AbstractValidator {
     /**
      * @Flow\InjectConfiguration(path="secretKey")
      * @var string
