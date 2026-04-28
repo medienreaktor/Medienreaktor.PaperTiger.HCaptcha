@@ -1,0 +1,9 @@
+'Medienreaktor.PaperTiger.HCaptcha:HCaptcha':
+  superTypes:
+    'Sitegeist.PaperTiger:Field': true
+    'Sitegeist.PaperTiger:Mixin.Name': false
+  ui:
+    label: 'H-Captcha'
+    icon: 'icon-shield'
+    group: form.special
+    position: 500

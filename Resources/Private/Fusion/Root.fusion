@@ -1,0 +1,2 @@
+include: **/*.fusion
+include: nodetypes://Medienreaktor.PaperTiger.HCaptcha/**/*.fusion

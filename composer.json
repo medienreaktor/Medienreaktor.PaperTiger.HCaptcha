@@ -1,0 +1,20 @@
+{
+  "name": "medienreaktor/papertiger-hcaptcha",
+  "type": "neos-package",
+  "description": "hCaptcha field for Sitegeist.PaperTiger forms.",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "neos/neos": "^9.1",
+    "sitegeist/papertiger": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Medienreaktor\\PaperTiger\\HCaptcha\\": "Classes/"
+    }
+  },
+  "extra": {
+    "neos": {
+      "package-key": "Medienreaktor.PaperTiger.HCaptcha"
+    }
+  }
+}

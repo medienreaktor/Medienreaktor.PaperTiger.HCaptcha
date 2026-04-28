@@ -1,0 +1,31 @@
+prototype(Medienreaktor.Hcaptcha:Hcaptcha) < prototype(Neos.Neos:ContentComponent) {
+
+    siteKey = ${Configuration.setting('Medienreaktor.Hcaptcha.siteKey')}
+    secretKey = ${Configuration.setting('Medienreaktor.Hcaptcha.secretKey')}
+    name = ${node.aggregateId.value}
+
+    @private {
+        scriptApi = Neos.Fusion:Tag {
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+                src = 'https://js.hcaptcha.com/1/api.js'
+                defer = true
+            }
+        }
+        scriptCallbackUri = Neos.Fusion:ResourceUri {
+            path = 'resource://Medienreaktor.Hcaptcha/Public/JavaScript/Hcaptcha.js'
+        }
+    }
+
+    renderer = afx`
+        <Sitegeist.PaperTiger:FieldContainer field.name={props.name}>
+            <div id={'h-captcha-' + props.name} class="h-captcha" data-siteKey={props.siteKey} data-callback="setHcaptchaResponse"></div>
+
+            <input type="hidden" id={field.getName()} name={field.getName()} value="" class="verify-captcha"/>
+
+            <script src={private.scriptCallbackUri} defer></script>
+            {private.scriptApi}
+        </Sitegeist.PaperTiger:FieldContainer>
+    `
+}

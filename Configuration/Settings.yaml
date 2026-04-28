@@ -1,0 +1,11 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Medienreaktor.PaperTiger.HCaptcha: true
+
+Medienreaktor:
+  PaperTiger:
+    HCaptcha:
+      siteKey: ''
+      secretKey: ''

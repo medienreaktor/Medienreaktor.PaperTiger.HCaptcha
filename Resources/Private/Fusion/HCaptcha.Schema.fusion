@@ -1,0 +1,3 @@
+prototype(Medienreaktor.Hcaptcha:Hcaptcha.Schema) < prototype(Neos.Fusion:Component) {
+    renderer = ${Form.Schema.string().validator('Medienreaktor.Hcaptcha:Hcaptcha').required}
+}
