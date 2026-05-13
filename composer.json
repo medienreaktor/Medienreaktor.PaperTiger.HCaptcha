@@ -4,7 +4,7 @@
   "description": "hCaptcha field for Sitegeist.PaperTiger forms.",
   "license": "GPL-3.0-or-later",
   "require": {
-    "neos/neos": "^9.1",
+    "neos/neos": "^8.0",
     "sitegeist/papertiger": "*"
   },
   "autoload": {
